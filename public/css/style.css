@@ -23,10 +23,22 @@ body {
     background-image: url("/img/img-noise-361x370.png");
     margin: 0;
 }
-a {color: var(--black)}
-h1{font-size: var(--font-size-x1);}
-h2{font-size: var(--font-size-lg);}
-h3{font-size: var(--font-size-md);}
+
+a {
+    color: var(--black)
+}
+
+h1 {
+    font-size: var(--font-size-x1);
+}
+
+h2 {
+    font-size: var(--font-size-lg);
+}
+
+h3 {
+    font-size: var(--font-size-md);
+}
 
 input[type="text"],
 input[type="email"],
@@ -44,7 +56,8 @@ textarea {
 }
 
 .btn {
-    background-color: var(--block);
+    background-color: var(--black);
+    /* background-color: #1c1c1c; */
     border: none;
     color: white;
     padding: 16px 32px;
@@ -146,56 +159,59 @@ img {
 
 /* Header->Navigation */
 
-.header__nav ul{
+.header__nav ul {
     list-style-type: none;
     display: flex;
     gap: 1rem;
     font-weight: 600;
     padding: 0;
 }
-.header__nav ul a{
+
+.header__nav ul a {
     padding: 10px;
     text-decoration: none;
 }
 
-.header__nav ul a:hover{
+.header__nav ul a:hover {
     /* padding: 10px; */
     text-decoration: underline;
 }
-.header__nav ul a.active{
+
+.header__nav ul a.active {
     color: var(--grey);
 }
 
-.author{
+.author {
     padding: 10px 0;
     text-align: center;
 }
 
-.author__heading{
+.author__heading {
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
-.author__body{
+.author__body {
     font-size: var(--font-size-md);
     margin: 5px 0 40px 0;
 }
 
-.articles__heading{
+.articles__heading {
     margin-top: 4rem;
     font-weight: 400px;
 }
+
 /* articles-ul */
-.articles-ul{
+.articles-ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    font-size: clamp(1.13rem,calc(1.08rem + 0.22vw),1.25rem);
+    font-size: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
     display: flex;
     flex-direction: column;
 }
 
-.articles-list__date{
+.articles-list__date {
     font-size: var(--font-size-base);
     color: var(--grey);
     width: 260px;
@@ -203,7 +219,7 @@ img {
 
 }
 
-.articles-ul li a{
+.articles-ul li a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -212,59 +228,62 @@ img {
 }
 
 @media only screen and (min-width:768px) {
-    .articles-ul li a{
+    .articles-ul li a {
         flex-direction: row;
         /* justify-content: center; */
         align-items: center;
     }
-    .articles-list__date{
+
+    .articles-list__date {
         text-align: right;
     }
 }
 
-.articles-ul li{
+.articles-ul li {
     font-size: 24px;
     cursor: pointer;
     transition: filter 0.1s;
 }
 
-.articles-ul li:not(:last-child){
+.articles-ul li:not(:last-child) {
     border-bottom: 1px solid var(--grey-light);
 }
 
-.articles-ul li:hover{
+.articles-ul li:hover {
     filter: none;
 }
 
-.articles-ul:hover li{
+.articles-ul:hover li {
     filter: blur(3px);
 }
 
-.articles-ul:hover li:hover{
+.articles-ul:hover li:hover {
     filter: none;
 }
 
-.pagination{
+.pagination {
     font-size: 1.3rem;
     color: var(--grey);
     text-decoration: none;
     margin-top: 40px;
     display: inline-block;
 }
-.pagination:hover{
+
+.pagination:hover {
     color: var(--black);
 }
+
 /* .articles */
-.article{
+.article {
     white-space: pre-wrap;
 }
 
-.footer{
+.footer {
     margin: 4rem;
     text-align: center;
 }
 
-.searchBar{
+.searchBar {
     visibility: hidden;
     transform: translateY(-100px);
     background-color: var(--black);
@@ -274,17 +293,17 @@ img {
     right: 0;
 }
 
-.searchBar.open{
+.searchBar.open {
     transform: translateY(0);
     transition: transform 0.1s;
 }
 
-.searchBar input{
+.searchBar input {
     margin: 0;
     padding: 0;
 }
 
-#searchClose{
+#searchClose {
     position: absolute;
     top: 0;
     right: 0;
@@ -296,18 +315,18 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .admin-posts {
+}
+
+.admin-posts {
     padding: 0;
     margin: 0;
-  }
-  
-  .admin-post-controls form {
+}
+
+.admin-post-controls form {
     display: inline-block;
-  }
-  
-  .admin-post-controls .btn  {
+}
+
+.admin-post-controls.btn {
     display: inline-block;
     background-color: var(--black);
     color: var(--gray-light);
@@ -316,10 +335,19 @@ img {
     font-size: .8rem;
     padding: 4px 8px;
     line-height: 2;
-  }
-  
-  .admin-posts li {
+}
+
+.admin-posts li {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+}
+
+.social-link {
+    margin-right: 15px;
   }
+  
+  .social-link:last-child {
+    margin-right: 0; 
+  }
+  
